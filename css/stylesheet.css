@@ -1,0 +1,297 @@
+/*==================================================
+                【このCSSについて】
+　覚えるのが苦手なので、忘れないように、たくさんいろいろ
+　書いてます。
+　見にくくてすいません( ;∀;)
+
+　嘉手川　航太朗
+
+==================================================-*/
+
+/*==============================================
+                 ヘッダー
+=============================================-*/
+header{
+    height: 105px; /*ヘッダーの高さ*/
+    width: 100%; /*ヘッダーの横幅。100%に設定することで画面いっぱいに。*/
+    position: fixed; /*固定配置。ヘッダーを画面上部に固定させます。*/
+    left: 0px; /*左寄せ*/
+    top: -10px; /*上部に隙間が空いたため、topで無理やり合わせる*/
+    z-index: 999 /*999に設定。それ以下のものは上部に表示されません。*/
+}
+header{
+    background-image: url(../img/header.gif); /*背景用のgifです。*/
+}
+header h1{
+    left: 0; /*左寄せ*/
+    position: fixed; /*固定配置*/
+}
+header li{
+    list-style: none; /*リストの点を消します。*/
+    float: right; /*フロートやで*/
+    right: 0; /*右寄せ*/
+    margin: 22.4px; /*マージンさん*/
+}
+
+/*==================================================
+                    メニュー
+==================================================*/
+.hover-menu{ /*メニューにエフェクト的なのをかけます。*/
+	opacity: 1; /*不透明度 0.0から1.0まで*/
+	-webkit-transition: .3s ease-in-out; /*変化する時間*/
+	transition: .3s ease-in-out; /*変化する時間*/
+}
+.hover-menu:hover{ /*ホバー内容*/
+	opacity:0.5; /*不透明度 0.0から1.0まで*/
+}
+@media (max-width: 900px){ /*画面サイズ900pxでスマホ向けページ*/
+    #menu{
+        display:none; /*900px以下の間は画面から消します*/
+    } 
+}
+
+/*===============================================
+    　　なんちゃってハンバーガーメニュー
+    ハンバーガーメニューの作り方を習っていないので
+    なんちゃってハンバーガーメニューを作りました。
+===============================================*/
+#checbox{
+    visibility : hidden; /*非表示*/
+}
+#hamburgermenu{
+    visibility : hidden; /*非表示*/
+}
+@media (max-width: 900px){ /*画面サイズ900pxでスマホ向けページ*/
+    #hamburgermenu{
+        visibility : visible; /*hiddenで非表示にしていたものを表示します。*/
+    }
+    #hamburgermenu{
+       position: fixed; /*固定設置*/
+       width: 160px; /*幅*/
+       background-image: url(../img/header.gif); /*メニュー背景です*/
+       left:0; /*左寄せです。*/
+    }
+    #checbox{
+        visibility : visible /*隠していたハンバーガーメニューを表示させるメニューボタンを表示させます。*/
+    }
+    #checbox li input[type="checkbox"] {
+        display:none; /*チェックボックスをメニューボタンの画像に差し替えたいので、チェックボックスを画面から見えなくしてしまいます。*/
+    }
+    #checbox li label {
+        display: block; /*コンテンツをまとめます。*/
+        padding: 10px 10px 10px 40px; /*場所を調整*/
+        cursor: auto; /*リンクカーソルを自動設定*/
+    }
+    #checbox li label:after {
+        content: ""; /*画像とかを本来は入れますが、バックグラウンドでやりたいから何も入れません。*/
+        width: 60px; /*サイズを60×60にします。*/
+        height: 60px;
+        background-size: 60px;
+        background-image:  url(../img/hamburgermenu.png); /*メニューボタンです。*/
+        background-repeat: no-repeat; /*ひとつで十分です。*/
+        position: absolute; /*絶対配置*/
+        top: 20px; 
+        margin: -18px 0 0 0; 
+        right: 5px; 
+    }
+    #checbox li input[type="checkbox"]:checked + label:after {
+          background-image:url(../img/hamburgermenu-close.png); /*メニューボタンが押される、つまりチェックボックスにチェックがついたときに閉じる用の画像に差し替えます*/
+    }
+}
+
+/*==============================
+           ボディー
+===============================*/
+body{
+    background-image: url(../img/background.gif);/*背景*/
+}
+.main-box{/*オレンジ色の枠で囲む*/
+    margin: 100px 35px 50px 35px;
+    border: dotted 10px orange;
+    padding: 10px;
+    text-align: center; /*テキストを中央揃えにします。*/
+    font-weight: bold; /*太字にします。*/
+    background-color: rgb(255, 255, 255) /*背景色を決めます。*/
+}
+.main-box h1{
+    border-bottom: dotted 3px orange　/*タイトルの下に線を引きます。これはdivで新しいクラスを作ったほうがよかったと後悔。時間があれば修正したいですね。*/
+}
+.main-box li{
+    list-style: none; /*リストの点を消すよ*/
+}
+.main-box img{
+    border-radius:50px /*画像の角を丸くする*/
+}
+
+/*=============================
+          スライドショー
+=============================*/
+.carousel {
+    background: rgb(255, 255, 255);/*スライドショー背景*/
+    width: 100%; /*横いっぱいに開きます。*/
+    height: 750px; /*高さを決めるよ*/
+    margin: 63px 0px 30px 0px; /*マージンで調整*/
+}
+
+
+
+/*=======================================================================
+
+　　　　　緑色、書くの疲れたから、ここからはサボります(-ω-)/
+
+=======================================================================*/
+
+
+/*===========================
+          フッター
+===========================*/
+footer{
+    height: 50px;
+    width: 100%;
+    left: 0px;
+    position: fixed;
+    bottom:0;
+}
+footer{
+    background-image: url(../img/footer.gif)/*フッター背景*/
+}
+small p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    margin: 0 auto;
+}
+
+/*=========================
+        ローディング
+========================-*/
+#loader-bg {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-image: url(../img/header.gif);
+	z-index: 999999;
+}
+#loader {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+	text-align: center;
+	color: #fff;
+	z-index: 2;
+}
+
+
+/*================================
+            メイン内コンテンツ
+================================*/
+.sub-box .last{
+    width:320px;
+    height:180px; 
+    list-style: none;
+    display: flex;
+    display: inline-flex;
+}
+.sub-box li{
+    list-style: none;
+}
+
+/*=====================================
+            リンクボックス
+=====================================*/
+.link-box {
+	border:5px solid rgb(48, 138, 255);
+	padding:10px;
+	display:flex;
+	margin:30px; /*間隔を調整*/
+	border-radius:15px /*角を丸める*/
+}
+.link-box:hover {
+	background-color:#b5d5ff;
+	-webkit-transition:background-color .35s;
+	transition:background-color .35s;
+}
+.img-box {
+	width:40%;
+	float:left;
+}
+.img-box div {
+	min-height:200px;
+	background-size:cover;
+	background-position:center center;
+}
+.text-box {
+	width:100%;
+	float:left;
+	padding-left:20px;
+	line-height:1.7;
+	margin:0;
+}
+.text-box .title {
+	font-size:20px;
+	font-weight:600;
+	color:#000000;
+	padding:0;
+    margin:0;
+    text-align: left
+}
+.text-box .description {
+	font-size:15px;
+	color:rgb(3, 3, 3);
+	padding:0;
+    margin:0;
+    text-align: left
+}
+table{
+    width: 100%
+}
+th{
+    padding: 4px;
+    color: rgb(48, 138, 255);
+    background-color: rgb(223, 237, 255);
+}
+td{
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 245, 223);
+    text-align: left;
+}
+td .collar{
+    background-color: rgb(48, 138, 255);
+}
+@media only screen and (max-width:900px) {
+.link-box{
+    flex-flow: column nowrap;
+}
+.img-box {
+    width: 250px;
+    clear: left;
+    margin: 0 auto
+}
+.img-box div {
+	height:120px;
+}
+.text-box {
+	margin-left: 3px;
+    line-height:1.5;
+    padding-left:0px;
+}
+.text-box .title {
+	font-size:18px;
+    margin: 0 auto;
+    text-align: center
+}
+.text-box .description {
+	font-size:14px;
+    margin-top:5px;
+    text-align: center
+}
+}
