@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--文章宣言(DTD)を最初に書く必要がある。終了タグは無い。DTDはDocument Type Definitionの略-->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css"  href="../css/flickity.css" media="all">
+    <link rel="stylesheet" type="text/css"  href="../css/stylesheet.css" media="all">
+    <!--Javascript-->
+    <script src="../js/javascript.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/flickity.pkgd.js"></script>
+    <!--jQuery-->
+    <script src="..//js/jquery-2.1.1.min.js"></script>
+    <script src="../http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--以上-->
+    <!--就活用に公開している為、クローラーを拒否しています。-->
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+    <meta name=”robots” content=”noarchive”>
+    <meta name=”robots” content=”none”>
+    <title>嘉手川航太朗の自己紹介</title>
+</head>
+<header>
+    <h1>
+        <a href="../index.html"><img src="../img/logo2.png" alt="嘉手川航太朗の自己紹介サイト" width="251" height="81"></a>
+    </h1>
+    <nav>
+        <u1 id="menu">
+            <li><a href="../use/index.html"><img src="../img/use.png" alt="その他" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="index.html"><img src="../img/story.png" alt="年表" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../hobby/index.html"><img src="../img/hobby.png" alt="趣味" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../index.html"><img src="../img/home.png" alt="ホーム" width="122" height="60" class="hover-menu"></a></li>
+        </u1>
+    </nav>
+    <div id="app"><!--チェックボックスでハンバーガーメニューもどき-->
+    <ul id="checbox">
+        <li>
+            <input type="checkbox" name="" value="" id="1" v-model="myVisible">
+            <label for="1"></label>
+        </li>
+    </ul>
+		<u1 id="hamburgermenu" v-if="myVisible">
+            <li><a href="../index.html"><img src="../img/home.png" alt="ホーム" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../hobby/index.html"><img src="../img/hobby.png" alt="趣味" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="index.html"><img src="../img/story.png" alt="年表" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../use/index.html"><img src="../img/use.png" alt="その他" width="122" height="60" class="hover-menu"></a></li>
+        </u1>
+	</div><!--以上-->
+	<script>
+		new Vue({
+			el: "#app",
+			data:{
+				myVisible:false
+			}
+		})
+	</script>
+</header>
+<body>
+    <!--ローディング風-->
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="../img/logo-start.png" width="250vw" height="auto">
+        </div>
+    </div>
+    <div id="wrap">
+    <!--ロード完了後に表示させる内容-->
+    </div>
+    <!--以上-->
+    <main>
+        <div class="main-box">
+            <table border="0">
+                <caption>嘉手川航太朗の年表</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">西暦</th>
+                        <th scope="col">event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2000</td>
+                        <td>生まれる。</td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>天使のような笑顔で、よく女の子と間違えられる（by母）</td>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td>虫が好き。ダンゴムシとお友達（by母）</td>
+                    </tr>
+                    <tr>
+                        <td>2003</td>
+                        <td>生まれてくる弟の名前を勝手に考え、母のおなかに呼び続けるが、親に拒否される。</td>
+                    </tr>
+                    <tr>
+                        <td>2004</td>
+                        <td>超絶イケメンの弟が生まれる。（by弟）</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">幼稚園時代</td>
+                    </tr>
+                    <tr>
+                        <td>2005</td>
+                        <td>ムシキングにハマる。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2006</td>
+                        <td>夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">小学校時代</td>
+                    </tr>
+                    <tr>
+                        <td>2007</td>
+                        <td>小学校に入学。階段で転んで持っていたビンを割り、そこに手をつき出血。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2008</td>
+                        <td>ニコニコ動画を見始める。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2009</td>
+                        <td>夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>深夜アニメを初めて見る。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2011</td>
+                        <td>夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>ブラウザオンラインゲームにハマる。チビクエストのトップランカーになる。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>転んでレンガに頭をぶつけて頭を割る。病院へ。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">中学生時代</td>
+                        </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>中学校に入学。中二病に目覚める。カードゲーム(ヴァンガード)を始める。コバトンの中の人をやる。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>転んで腕を骨折。RPGツクールを手に入れる。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>ゲーム制作サークル(仮)立ち上げる。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">高校時代</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>高校に入学。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td>コミックマーケットにサークル参加。ゲームデータの入ったUSBメモリを忘れ、大遅刻。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>大学のAO入試に３回落ちる。夏にポケモン映画を見る。</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">専門学校時代</td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>日本電子で学ぶ。夏にポケモン映画を見る予定。</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>禁則事項です。</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>禁則事項です。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<footer>
+<small><p>嘉手川航太朗の自己紹介サイト</p></small>
+</footer>
+</html>

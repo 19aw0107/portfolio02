@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--文章宣言(DTD)を最初に書く必要がある。終了タグは無い。DTDはDocument Type Definitionの略-->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css"  href="css/flickity.css" media="all">
+    <link rel="stylesheet" type="text/css"  href="css/stylesheet.css" media="all">
+    <!--Javascript-->
+    <script src="js/javascript.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/flickity.pkgd.js"></script>
+    <!--jQuery-->
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+    var h = $(window).height();
+    
+    $('#wrap').css('display','none');
+    $('#loader-bg ,#loader').height(h).css('display','block');
+    });
+    
+    $(window).load(function () {
+    $('#loader-bg').delay(900).fadeOut(800);
+    $('#loader').delay(600).fadeOut(300);
+    $('#wrap').css('display', 'block');
+    });
+    
+    $(function(){
+    setTimeout('stopload()',10000);
+    });
+    
+    function stopload(){
+    $('#wrap').css('display','block');
+    $('#loader-bg').delay(900).fadeOut(800);
+    $('#loader').delay(600).fadeOut(300);
+    }
+    </script>
+    <!--以上-->
+    <!--就活用に公開している為、クローラーを拒否しています。-->
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+    <meta name=”robots” content=”noarchive”>
+    <meta name=”robots” content=”none”>
+    <title>嘉手川航太朗の自己紹介</title>
+</head>
+    <!--ローディング風-->
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="img/logo-start.png" width="250vw" height="auto">
+        </div>
+    </div>
+    <div id="wrap">
+    <!--ロード完了後に表示させる内容-->
+    </div>
+ <!--以上-->
+<header>
+    <h1>
+        <a href="index.html"><img src="img/logo2.png" alt="嘉手川航太朗の自己紹介サイト" width="251" height="81"></a>
+    </h1>
+    <nav>
+        <u1 id="menu">
+            <li><a href="use/index.html"><img src="img/use.png" alt="その他" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="story/index.html"><img src="img/story.png" alt="年表" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="hobby/index.html"><img src="img/hobby.png" alt="趣味" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="index.html"><img src="img/home.png" alt="ホーム" width="122" height="60" class="hover-menu"></a></li>
+        </u1>
+    </nav>
+    <div id="app"><!--チェックボックスでハンバーガーメニューもどき-->
+    <ul id="checbox">
+        <li>
+            <input type="checkbox" name="" value="" id="1" v-model="myVisible">
+            <label for="1"></label><!--idの指定-->
+        </li>
+    </ul>
+		<u1 id="hamburgermenu" v-if="myVisible">
+            <li><a href="index.html"><img src="img/home.png" alt="ホーム" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="hobby/index.html"><img src="img/hobby.png" alt="趣味" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="story/index.html"><img src="img/story.png" alt="年表" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="use/index.html"><img src="img/use.png" alt="その他" width="122" height="60" class="hover-menu"></a></li>
+        </u1>
+	</div><!--以上-->
+	<script>
+		new Vue({
+			el: "#app",
+			data:{
+				myVisible:false
+			}
+		})
+	</script>
+</header>
+<body>
+    <!--スライドショー-->
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell">
+            <img src="img/image01.jpg" width="1334" height="750">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/image02.jpg" width="1334" height="750">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/image03.jpg" width="1334" height="750">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/image04.jpg" width="1334" height="750">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/image05.jpg" width="1334" height="750">
+        </div>
+        <div class="carousel-cell">
+            <img src="img/image06.jpg" width="1334" height="750">
+        </div>
+    </div>
+    <!--以上-->
+    <main>
+        <div class="main-box">
+            <h1 class="h1-decoration">嘉手川航太朗って誰？</h1>
+            <p>自己紹介をさせていただきます。</p>
+
+            <p>嘉手川 航太朗（かでかわ こうたろう）と申します。</p>
+                    
+            <p>よく「喜手川（きでかわ）」や「古手川（こてがわ）」「航太郎（郎ではなく朗です）」などと間違われます(;・∀・)</p>
+                    
+            <p>※中高の学校の先生からも間違えて覚えられていました……</p>
+                    
+            <p>最近のマイブームはフレンチトーストを作ることです!!( ･´ｰ･｀)ﾄﾞﾔｧ</p>
+                    
+            <p>趣味はアニメやゲーム。ゲームのフレンドが少ないので、現在フレンド募集中です！！</p>
+                    
+            <p>プレイしているゲームについては趣味ページでまとめたので是非見てください～</p>
+                    
+            <p>よろしくお願いします！m(_ _)m</p>
+        </div>
+        <div class="main-box">
+            <h1 class="h1-decoration">好きな食べ物は？</h1>
+            <h2>「フレンチトースト」「ホットケーキ」「卵料理」など</h2>
+            <img src="img/Frenchtoast1.jpg" width="293" height="auto">
+            <img src="img/hotcake.jpg" width="293" height="auto">
+            <img src="img/Frenchtoast2.jpg" width="293" height="auto">
+        </div>
+        <div class="main-box">
+            <h1 class="h1-decoration">好きなアーティストは？</h1>
+            <div class="sub-box">
+                <img src="">
+                <h2>「HoneyWorks」です！</h2>
+                <p>HoneyWorks（通称ハニワ）とは</p>
+                <p>楽曲・動画などを制作するクリエイターユニットです。</p>
+                <p></p>
+                <p>僕がおすすめしたい曲は……</p>
+                <p></p>
+                <ul>
+                    <li>「金曜日のおはよう</li>
+                    <li>「私、アイドル宣言」</li>
+                    <li>「東京ウィンターセッション」</li>
+                </ul>
+                    <p>です！</p>
+                <ul>
+                    <li class="last">
+                        <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm23910729/script?w=320&h=180" alt="ハニワの動画リンク"></script>
+                        <noscript>
+                            <a href="https://www.nicovideo.jp/watch/sm23910729">
+                            ┗|∵|┓金曜日のおはよう／HoneyWorks feat.GUMI
+                            </a>
+                        </noscript>
+                    </li>
+                    <li class="last">
+                        <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm32825363/script?w=320&h=180"></script>
+                        <noscript>
+                            <a href="https://www.nicovideo.jp/watch/sm32825363">
+                            私、アイドル宣言／CHiCO with HoneyWorks
+                            </a>
+                        </noscript>
+                    </li>
+                    <li class="last">
+                        <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm32352047/script?w=320&h=180"></script>
+                        <noscript>
+                            <a href="https://www.nicovideo.jp/watch/sm32352047">
+                            ┗|∵|┓東京ウインターセッション ／ HoneyWorks
+                            </a>
+                        </noscript>
+                    </li>
+                </ul>
+            </div>
+            <div class="movie">
+                <!--ニコニコの埋め込み-->
+            </div>
+        </div>
+        <div class="main-box">
+            <h1 class="h1-decoration">嘉手川の○○</h1>
+            <h2>嘉手川の生活</h2>
+            <ul>
+                <li>月曜日から木曜日</li>
+                <li>起きる→走る→電車に乗る→学校に到着→いつの間にか教室が閉まる時間→電車に乗る→寝る→ココハドコ?→電車に乗る→帰宅→寝る</li>
+                <li>金～土曜日</li>
+                <li>起きる→寝る→起きる→ゲーム→勉強→ゲーム→勉強→ゲーム→勉強→ゲーム→次の日</li>
+            </ul>
+            <h2>嘉手川のいろいろ</h2>
+            <ul>
+                <li>・極度な人見知りで、対話スキルゼロ。</li>
+                <li>・高3の1月まではゲームクリエイターを目指していたが、web系にルートチェンジ。</li>
+                <li>・ちょくちょく敬語になってしまう癖がある。</li>
+                <li>・ゲーム中のテンションが高い。</li>
+                <li>・面白そうなことはなんでもやってしまう。</li>
+                <li>・速読と水中での息止めが得意。</li>
+                <li>・LINEの友達は<br>公式アカウント＞親戚や家族、修学旅行等で出会った方々＞友達</li>
+            </ul>
+        </div>
+        <div class="main-box">
+            <h1 class="h1-decoration">最後に</h1>
+            <p>嘉手川航太朗です。自分からはあまり話しません。(話題が無いのです(´;ω;｀))</p>
+            <p>話しかけられれば話します…多分</p>
+            <p>僕もわからないことだらけなので、これから頑張っていきたいと思います。</p>
+            <p>よろしくお願いします!!</p>
+        </div>
+    </main>
+</body>
+<footer>
+<small><p>嘉手川航太朗の自己紹介サイト</p></small>
+</footer>
+</html>

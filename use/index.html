@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--文章宣言(DTD)を最初に書く必要がある。終了タグは無い。DTDはDocument Type Definitionの略-->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css"  href="../css/flickity.css" media="all">
+    <link rel="stylesheet" type="text/css"  href="../css/stylesheet.css" media="all">
+    <!--Javascript-->
+    <script src="../js/javascript.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/flickity.pkgd.js"></script>
+    <!--jQuery-->
+    <script src="..//js/jquery-2.1.1.min.js"></script>
+    <script src="../http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--以上-->
+    <!--就活用に公開している為、クローラーを拒否しています。-->
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+    <meta name=”robots” content=”noarchive”>
+    <meta name=”robots” content=”none”>
+    <title>嘉手川航太朗の自己紹介</title>
+</head>
+<header>
+    <h1>
+        <a href="../index.html"><img src="../img/logo2.png" alt="嘉手川航太朗の自己紹介サイト" width="251" height="81"></a>
+    </h1>
+    <nav>
+        <u1 id="menu">
+            <li><a href="../use/index.html"><img src="../img/use.png" alt="その他" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../story/index.html"><img src="../img/story.png" alt="年表" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="index.html"><img src="../img/hobby.png" alt="趣味" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../index.html"><img src="../img/home.png" alt="ホーム" width="122" height="60" class="hover-menu"></a></li>
+        </u1>
+    </nav>
+    <div id="app"><!--チェックボックスでハンバーガーメニューもどき-->
+    <ul id="checbox">
+        <li>
+            <input type="checkbox" name="" value="" id="1" v-model="myVisible">
+            <label for="1"></label>
+        </li>
+    </ul>
+		<u1 id="hamburgermenu" v-if="myVisible">
+            <li><a href="../index.html"><img src="../img/home.png" alt="ホーム" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="index.html"><img src="../img/hobby.png" alt="趣味" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../story/index.html"><img src="../img/story.png" alt="年表" width="122" height="60" class="hover-menu"></a></li>
+            <li><a href="../use/index.html"><img src="../img/use.png" alt="その他" width="122" height="60" class="hover-menu"></a></li>
+        </u1>
+	</div><!--以上-->
+	<script>
+		new Vue({
+			el: "#app",
+			data:{
+				myVisible:false
+			}
+		})
+	</script>
+</header>
+<body>
+    <!--ローディング風-->
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="../img/logo-start.png" width="250vw" height="auto">
+        </div>
+    </div>
+    <div id="wrap">
+    <!--ロード完了後に表示させる内容-->
+    </div>
+    <!--以上-->
+    <main>
+        <div class="main-box">
+            <section>
+                <section>
+                    <h2>このサイトで使ったこと</h2>
+                    <p>このサイトで使ったものを忘れないように個人的にまとめました。</p>
+                    <h1></h1>
+                    <h2>サイト制作に使ったソフト/webサービス</h2>
+                    <ul>
+                        <li>Visual Studio Code(利用目的：環境確認)</li>
+                        <li>ATOM(利用目的：HTML等の入力)</li>
+                        <li>Photoshop(利用目的：ロゴ・ボタン作成、画像加工)</li>
+                        <li><a href="http://saucenao.com/">SauceNAO(利用目的：公式画像の検索)</a></li>
+                        <li><a href="https://sharehtml.site/">ShareHtmlを、もっと綺麗にしたメーカー(利用目的：アニメサイトの引用)</a></li>
+                    </ul>
+                </section>
+                <h1></h1>
+                <section>
+                    <h2>サイトに利用した画像など</h2>
+                    <ul>
+                        <li>背景画像(お借りしました!<a href="http://bg-patterns.com/?p=1586">http://bg-patterns.com/?p=1586</a>)</li>
+                        <li>ヘッダー・フッター画像(お借りしました!<a href="http://bluegreen.jp/sozai/bg/natural/index.html">http://bluegreen.jp/sozai/bg/natural/index.html</a>)</li>
+                        <li>ボタン(Photoshop)</li>
+                        <li>ロゴ(Photoshop)</li>
+                        <li>動画(ニコニコの埋め込み機能を利用)</li>
+                        <li>アニメ・ゲーム画像(公式より直接リンク。※直リンは迷惑になるのでここだけです。)</li>
+                    </ul>
+        <!--</a>と</li>の場所に注意！-->
+        <!--<ul>が箇条書き、<ol>が数字での箇条書き-->
+                </section>
+                <h1></h1>
+                <section>
+                    <h2>サイトに利用したあれこれ</h2>
+                    <ul>
+                        <li>ローディングは作り方がよくわからないので、なんちゃってローディングです。</li>
+                        <li>ハンバーガーメニューは作り方が分からなかったので、Javascriptの時間に習ったvue.jsの「チェックボックスを押して表示・非表示」のやつを使って、隠していたメニューを表示しています。</li>
+                        <li>スライドショーはJavascriptライブラリ「flickity」をお借りしました。</li>
+                        <li>画面サイズ900pxでいろいろ変わるレスポンシブにちょこっと対応してみました。</li>
+                        <li>全体的にシンプルなデザインになるようにしました。</li>
+                        <li>点線をつけるのがめんどくさかったのでh1＝点線にしてます。(あとから後悔しました…つぎから気を付けます。)</li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </main>
+</body>
+<footer>
+<small><p>嘉手川航太朗の自己紹介サイト</p></small>
+</footer>
+</html>
